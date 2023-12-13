@@ -1,0 +1,16 @@
+
+
+@media (max-width:575px){
+
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .content .text {
+        width: 95%;
+    }
+
+    .content .counter {
+        margin: 30px auto;
+    }
+}

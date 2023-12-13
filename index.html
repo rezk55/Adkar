@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azkar</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body dir="rtl">
+
+    <header class="navbar">
+        <nav class="container">
+            <div class="title">
+                <ul class="list">
+                    <li>
+                        <a class="active" href="">أذكار الصباح</a>
+                    </li>
+                    <li>
+                        <a href="">أذكار المساء</a>
+                    </li>
+                    <li>
+                        <a href="">أذكار النوم</a>
+                    </li>
+                    <li>
+                        <a href="">أذكار الاستيقاظ</a>
+                    </li>
+                    <li>
+                        <a href="">تسابيح</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+       <div class="content">
+            <div class="text">
+                <div class="text-status">
+                    <div class="count-times" id="countTimes">1</div>
+                    <div class="count-times status" id="status">تم</div>
+                </div>
+                <button class="previous" id="previous" disabled> 
+                    <span class="shadow"><</span>
+                </button>
+                <div class="text-zekr" id="textZekr"></div>
+                <button class="next" id="next" >
+                    <span class="shadow">></span>
+                </button>
+                <div class="number-zekr">       
+                    <div class="show-number" id="showNumber">
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="show-sab7">
+                    <span id="showSab7">0</span>
+                </div>
+                <div class="button">
+                    <button class="btn" type="button" id="sab7" onclick="counter()">Count</button>
+                </div>
+            </div>
+       </div>
+    </div>
+   </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
