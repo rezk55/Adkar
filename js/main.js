@@ -56,13 +56,20 @@ function fetchZekr(nameZekr,length){
             if(numberZekr < length-1){
                 numberZekr++;
                 showZekr();
-                previous.disabled = false;
+                getCountZekr();
+            } else {
+                numberZekr = 0;
+                showZekr();
                 getCountZekr();
             }
         });
         previous.addEventListener("click", function(){ 
             if(numberZekr){
                 numberZekr--;
+                showZekr();
+                getCountZekr();
+            } else {
+                numberZekr = length-1;
                 showZekr();
                 getCountZekr();
             }

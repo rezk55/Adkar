@@ -4,6 +4,11 @@
     --textColor: #25265E;
 }
 
+body {
+    color: var(--textColor);
+    font-family: 'Courier New', Courier, monospace;
+}
+
 ul, a {
     list-style: none;
     margin: 0;
@@ -11,8 +16,12 @@ ul, a {
     text-decoration: none;
 }
 
-body {
-    color: var(--textColor);
+h1 {
+    text-align: center;
+    width: max-content;
+    margin: 10px auto;
+    padding: 0;
+    border-bottom: 2px solid var(--firstColor);
 }
 
 .container {
@@ -37,12 +46,10 @@ body {
 }
 
 .title .list{
-    padding-top: 30px;
     display: flex;
-    column-gap: 20px;
+    column-gap: 10px;
     list-style: none;
 }
-
 .title .list li button {
     position: relative;
     color: var(--textColor);
@@ -86,15 +93,16 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .content .text {
     width: 90%;
-    height: 65vh;
+    height: 85vh;
     background-color: var(--firstColor);
     color: #fff;
     font-size: 1.3rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: relative;
     display: flex;
     justify-content: center;
@@ -129,7 +137,6 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
-    /* border: 2px solid #fff; */
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -190,9 +197,11 @@ body {
 }
 
 .content .counter {
+    position: absolute;
+    bottom: 70px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     column-gap: 10px;
 }
 
