@@ -48,6 +48,7 @@ body {
     color: var(--textColor);
     font-size: 1.2rem;
     font-weight: 700;
+    cursor: pointer;
     border: none;
     background: transparent;
     transition: all 0.4s;
