@@ -5,16 +5,8 @@
     .container {
         width: 95%;
     }
-    
-    .content {
-      
-    }
 
     .content .text {
         width: 100%;
-    }
-
-    .content .counter {
-        /* margin: 30px auto; */
     }
 }
