@@ -2,15 +2,19 @@
 
 @media (max-width:575px){
 
+    .container {
+        width: 95%;
+    }
+    
     .content {
-        flex-wrap: wrap;
+      
     }
 
     .content .text {
-        width: 95%;
+        width: 100%;
     }
 
     .content .counter {
-        margin: 30px auto;
+        /* margin: 30px auto; */
     }
 }

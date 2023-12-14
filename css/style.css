@@ -1,4 +1,4 @@
-
+/* #DBA500 */
 :root{
     --firstColor: #0556F3;
     --textColor: #25265E;
@@ -17,6 +17,8 @@ body {
 
 .container {
     width: 90%;
+    display: flex;
+    justify-content: center;
     margin: auto;
 }
 
@@ -41,23 +43,25 @@ body {
     list-style: none;
 }
 
-.title .list li a {
+.title .list li button {
     position: relative;
     color: var(--textColor);
     font-size: 1.2rem;
     font-weight: 700;
+    border: none;
+    background: transparent;
     transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
+    -webkit-transition:all 0.4s;
+    -moz-transition:all 0.4s;
+    -ms-transition:all 0.4s;
+    -o-transition:all 0.4s;
 }
 
-.title .list li a:hover {
+.title .list li button:hover {
     color: var(--firstColor);
 }
 
-.title .list li a::before {
+.title .list li button::before {
     position: absolute;
     content: "";
     bottom: -5px;
@@ -71,21 +75,22 @@ body {
     -o-transition: width 0.4s;
 }
 
-.title .list li:hover a::before {
+.title .list li:hover button::before {
     width: 100%;
 }
 
 .content {
+    width: 100%;
     display: flex;
-    margin-top: 30px;
+    flex-direction: column;
     align-items: center;
-    column-gap: 20px;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .content .text {
-    width: 50%;
-    height: 50vh;
-    padding: 20px;
+    width: 90%;
+    height: 65vh;
     background-color: var(--firstColor);
     color: #fff;
     font-size: 1.3rem;
@@ -105,14 +110,15 @@ body {
 
 .content .text .text-status .status {
     position: absolute;
-    right: 150px;
-    border: 2px solid rgb(14, 204, 14);
+    left: -100px;
+    color: rgb(7, 238, 7);
     opacity: 0;
     transition: opacity 0.4s;
     -webkit-transition: opacity 0.4s;
     -moz-transition: opacity 0.4s;
     -ms-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
+    box-shadow: 2px 2px 4px 2px var(--textColor);
 }
 
 .content .text .count-times {
@@ -122,17 +128,19 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
+    box-shadow: 2px 2px 4px 2px var(--textColor);
 }
 
 .content .text .text-zekr {
     text-align: center;
-    width: 75%;
+    width: 70%;
+    padding: 10px;
 }
 
 .content .text .next,.content .text .previous {
@@ -170,7 +178,10 @@ body {
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);}
+    -o-transform: translateX(-50%);
+    box-shadow: 2px 2px 4px 2px var(--textColor);
+    padding: 10px;
+}
 
 
 .content .text .number-zekr .show-number {
@@ -178,8 +189,9 @@ body {
 }
 
 .content .counter {
-    width: 50%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     column-gap: 10px;
 }
 
@@ -195,10 +207,6 @@ body {
     -moz-transition: box-shadow 0.4s;
     -ms-transition: box-shadow 0.4s;
     -o-transition: box-shadow 0.4s;
-}
-
-.button:hover {
-    box-shadow: none;
 }
 
 .btn {

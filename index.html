@@ -15,19 +15,19 @@
             <div class="title">
                 <ul class="list">
                     <li>
-                        <a class="active" href="">أذكار الصباح</a>
+                        <button class="active" id="navElSabah">أذكار الصباح</button>
                     </li>
                     <li>
-                        <a href="">أذكار المساء</a>
+                        <button class="" id="navElMasaa">أذكار المساء</button>
                     </li>
                     <li>
-                        <a href="">أذكار النوم</a>
+                        <button id="navElNoom">أذكار النوم</button>
                     </li>
                     <li>
-                        <a href="">أذكار الاستيقاظ</a>
+                        <button id="navElEstekaz">أذكار الاستيقاظ</button>
                     </li>
                     <li>
-                        <a href="">تسابيح</a>
+                        <button id="navElTasabeeh">تسابيح</button>
                     </li>
                 </ul>
             </div>
@@ -38,13 +38,13 @@
        <div class="content">
             <div class="text">
                 <div class="text-status">
-                    <div class="count-times" id="countTimes">1</div>
+                    <div class="count-times" id="countTimes">0</div>
                     <div class="count-times status" id="status">تم</div>
                 </div>
                 <button class="previous" id="previous" disabled> 
                     <span class="shadow"><</span>
                 </button>
-                <div class="text-zekr" id="textZekr"></div>
+                <div class="text-zekr" id="textZekr">اختر الذكر من الاعلى</div>
                 <button class="next" id="next" >
                     <span class="shadow">></span>
                 </button>
@@ -55,11 +55,11 @@
                 </div>
             </div>
             <div class="counter">
+                <div class="button">
+                    <button class="btn" type="button" id="sab7" >عداد</button>
+                </div>
                 <div class="show-sab7">
                     <span id="showSab7">0</span>
-                </div>
-                <div class="button">
-                    <button class="btn" type="button" id="sab7" onclick="counter()">Count</button>
                 </div>
             </div>
        </div>
