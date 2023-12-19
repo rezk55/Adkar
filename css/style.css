@@ -111,15 +111,15 @@ h1 {
 }
 
 .content .text .text-status {
+    width: 100%;
     position: absolute;
     top: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .content .text .text-status .status {
     position: absolute;
-    left: -100px;
     color: rgb(7, 238, 7);
     opacity: 0;
     transition: opacity 0.4s;
@@ -127,7 +127,7 @@ h1 {
     -moz-transition: opacity 0.4s;
     -ms-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
-    box-shadow: 2px 2px 4px 2px var(--textColor);
+    background-color: var(--firstColor);
 }
 
 .content .text .count-times {
@@ -136,7 +136,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -205,7 +204,7 @@ h1 {
     column-gap: 10px;
 }
 
-.button {
+.counter .button {
     box-shadow: 2px 2px 4px 2px var(--textColor);
     transition: box-shadow 0.4s;
     border-radius: 100%;
@@ -219,7 +218,7 @@ h1 {
     -o-transition: box-shadow 0.4s;
 }
 
-.btn {
+.counter .button .btn {
     width: 70px;
     height: 70px;
     background-color: var(--firstColor);
@@ -237,24 +236,9 @@ h1 {
     -ms-transition: box-shadow 0.4s;
     -o-transition: box-shadow 0.4s;
 }
+
 .btn:hover {
     box-shadow: 2px 2px 4px 2px inset var(--textColor);
-}
-
-.show-sab7 {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--firstColor);
-    color: #fff;
-    box-shadow: 2px 2px 4px 2px var(--textColor);
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
 }
 
 .shadow {
