@@ -1,20 +1,20 @@
 
-"use strict"
+"use strict";
 
-var navElSabah = document.getElementById('navElSabah');
-var navElMasaa = document.getElementById('navElMasaa');
-var navElNoom = document.getElementById('navElNoom');
-var navElEstekaz = document.getElementById('navElEstekaz');
-var navElTasabeeh = document.getElementById('navElTasabeeh');
-var countZekr = Number(document.getElementById('countTimes').innerHTML);
-var _status = document.getElementById('status');
-var showSab7 = document.getElementById('showSab7');
-var countTimes = document.getElementById('countTimes');
-var textZekr = document.getElementById('textZekr');
-var next = document.getElementById('next');
-var showNumber = document.getElementById('showNumber');
-var previous = document.getElementById('previous');
-var sab7 = document.getElementById('sab7');
+let navElSabah = document.getElementById('navElSabah');
+let navElMasaa = document.getElementById('navElMasaa');
+let navElNoom = document.getElementById('navElNoom');
+let navElEstekaz = document.getElementById('navElEstekaz');
+let navElTasabeeh = document.getElementById('navElTasabeeh');
+let countZekr = Number(document.getElementById('countTimes').innerHTML);
+let _status = document.getElementById('status');
+let showSab7 = document.getElementById('showSab7');
+let countTimes = document.getElementById('countTimes');
+let textZekr = document.getElementById('textZekr');
+let next = document.getElementById('next');
+let showNumber = document.getElementById('showNumber');
+let previous = document.getElementById('previous');
+let sab7 = document.getElementById('sab7');
 
 function fillArray(arr,val,length){
     for(let i=0;i<length;i++){
@@ -53,15 +53,13 @@ function fetchZekr(nameZekr,length){
         showZekr();
         getCountZekr();
         next.addEventListener("click", function(){
-            if(numberZekr < length-1){
-                numberZekr++;
-                showZekr();
-                getCountZekr();
-            } else {
-                numberZekr = 0;
-                showZekr();
-                getCountZekr();
-            }
+            numberZekr++;
+            numberZekr %= length;
+            
+            showZekr();
+            getCountZekr();
+            console.log(flagStatus);
+            
         });
         previous.addEventListener("click", function(){ 
             if(numberZekr){
@@ -88,45 +86,36 @@ function fetchZekr(nameZekr,length){
     });
 }
 
-// fetchZekr("أذكار الصباح",25);
-
-navElSabah.addEventListener("click", function(){
+function removeActive(){
+    navElSabah.classList.remove('active');
     navElMasaa.classList.remove('active');
     navElNoom.classList.remove('active');
     navElEstekaz.classList.remove('active');
     navElTasabeeh.classList.remove('active');
+}
+
+navElSabah.addEventListener("click", function(){
+    removeActive();
     this.classList.add('active');
     fetchZekr("أذكار الصباح",25);
 });
 navElMasaa.addEventListener("click", function(){
-    navElSabah.classList.remove('active');
-    navElNoom.classList.remove('active');
-    navElEstekaz.classList.remove('active');
-    navElTasabeeh.classList.remove('active');
+    removeActive();
     this.classList.add('active');
     fetchZekr("أذكار المساء",25);
 });
 navElNoom.addEventListener("click", function(){
-    navElMasaa.classList.remove('active');
-    navElSabah.classList.remove('active');
-    navElEstekaz.classList.remove('active');
-    navElTasabeeh.classList.remove('active');
+    removeActive();
     this.classList.add('active');
     fetchZekr("أذكار النوم",10);
 });
 navElEstekaz.addEventListener("click", function(){
-    navElMasaa.classList.remove('active');
-    navElSabah.classList.remove('active');
-    navElNoom.classList.remove('active');
-    navElTasabeeh.classList.remove('active');
+    removeActive();
     this.classList.add('active');
     fetchZekr("أذكار الاستيقاظ",3);
 });
 navElTasabeeh.addEventListener("click", function(){
-    navElMasaa.classList.remove('active');
-    navElSabah.classList.remove('active');
-    navElNoom.classList.remove('active');
-    navElEstekaz.classList.remove('active');
+    removeActive();
     this.classList.add('active');
     fetchZekr("تسابيح",16);
 });
